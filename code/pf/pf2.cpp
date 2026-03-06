@@ -544,12 +544,12 @@ auto run = krnl_pf(
     printf("iterations                : %d\n", iter);
     printf("------------------------------------------\n");
     printf("----------------excute time---------------\n");
-    printf("initial and create matrix : %lfs\n", Ybus_time*100);
-    printf("matrix factorization      : %lfs\n", fac_time*100);
-    printf("compute rhs               : %lfs\n", rhs_time*100);
-    printf("back and forward          : %lfs\n", back_for_time*100);
-    printf("convert                   : %lfs\n", convert_time*100);
-    printf("total                     : %lfs\n", (Ybus_time + fac_time + rhs_time + back_for_time + convert_time)*100);
+    printf("initial and create matrix : %lfs\n", Ybus_time/3);
+    printf("matrix factorization      : %lfs\n", fac_time/3);
+    printf("compute rhs               : %lfs\n", rhs_time/3);
+    printf("back and forward          : %lfs\n", back_for_time/3);
+    printf("convert                   : %lfs\n", convert_time/3);
+    printf("total                     : %lfs\n", (Ybus_time + fac_time + rhs_time + back_for_time + convert_time)/3);
     printf("------------------------------------------\n");
 
     power_show_csv(ret_Ybus.graph, graph_in);
@@ -599,12 +599,12 @@ void program_exit(std::string casename, double precision, int node_num, int edge
     printf("iterations                : %d\n", iter);
     printf("------------------------------------------\n");
     printf("----------------excute time---------------\n");
-    printf("initial and create matrix : %lfs\n", Ybus_time*100);
-    printf("matrix factorization      : %lfs\n", fac_time*100);
-    printf("compute rhs               : %lfs\n", rhs_time*100);
-    printf("back and forward          : %lfs\n", back_for_time*100);
-    printf("convert                   : %lfs\n", convert_time*100);
-    printf("total                     : %lfs\n", (Ybus_time + fac_time + rhs_time + back_for_time + convert_time)*100);
+    printf("initial and create matrix : %lfs\n", Ybus_time/3);
+    printf("matrix factorization      : %lfs\n", fac_time/3);
+    printf("compute rhs               : %lfs\n", rhs_time/3);
+    printf("back and forward          : %lfs\n", back_for_time/3);
+    printf("convert                   : %lfs\n", convert_time/3);
+    printf("total                     : %lfs\n", (Ybus_time + fac_time + rhs_time + back_for_time + convert_time)/3);
     printf("------------------------------------------\n");
 
     power_show_csv(ret_Ybus.graph, graph_in);

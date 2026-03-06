@@ -464,12 +464,12 @@ int main(int argc, char* argv[]) {
     printf("iterations                : %d\n", (iter) / 2);
     printf("------------------------------------------\n");
     printf("----------------excute time---------------\n");
-    printf("initial and create matrix : %lfs\n", H_time*100);
-    printf("matrix factorization      : %lfs\n", fac_time*100);
-    printf("compute rhs               : %lfs\n", rhs_time*100);
-    printf("back and forward          : %lfs\n", back_for_time*100);
-    printf("convert                   : %lfs\n", convert_time*100);
-    printf("total                     : %lfs\n", (H_time + fac_time + rhs_time + back_for_time + convert_time)*100);
+    printf("initial and create matrix : %lfs\n", H_time/3);
+    printf("matrix factorization      : %lfs\n", fac_time/3);
+    printf("compute rhs               : %lfs\n", rhs_time/3);
+    printf("back and forward          : %lfs\n", back_for_time/3);
+    printf("convert                   : %lfs\n", convert_time/3);
+    printf("total                     : %lfs\n", (H_time + fac_time + rhs_time + back_for_time + convert_time)/3);
     printf("------------------------------------------\n");
 
     power_show(ret_H.graph, graph_in);
